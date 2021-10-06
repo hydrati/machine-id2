@@ -1,19 +1,26 @@
-import { command } from 'execa'
+import { exec } from 'child_process'
 
 import hasher from 'crypto-js/sha256'
 import { enc } from 'crypto-js/core'
 
 import { MachineIdError, CMD_ERROR_MSG } from './error'
 
+export const execAsync = (cmd: string) => 
+    new Promise<string>(
+        (r, j) => exec(
+            cmd,
+            (e, s) => (e == null ? r(s.toString()) : j(e))
+        )
+    )
+
 export async function execQuery(query: string): Promise<string> {
     let result
     try {
-        result = await command(query)
+        result = await execAsync(query)
     } catch(e: any) {
         throw new MachineIdError(CMD_ERROR_MSG, e)
     }
-    if (result.failed) throw new MachineIdError(CMD_ERROR_MSG)
-    else return result.stdout.toString()
+    return result
 }
 
 export function formatStr(str: string) {
