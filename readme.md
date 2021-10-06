@@ -56,3 +56,8 @@ Module based on OS native UUID/GUID which used for internal needs.
 > The machine ID is usually generated from a random source during system installation and stays constant for all subsequent boots. Optionally, for stateless systems, it is generated during runtime at early boot if it is found to be empty.
 
 > The machine ID does not change based on user configuration or when hardware is replaced.
+
+## Thanks to
+- [node-machine-id](https://github.com/automation-stack/node-machine-id)
+- [node-machine-id (mooring)](https://github.com/mooring/node-machine-id)
+- [node-machine-id (Nokel81)](https://github.com/Nokel81/node-machine-id/tree/no-regexe)
