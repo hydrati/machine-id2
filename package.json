@@ -2,7 +2,6 @@
   "name": "machine-id2",
   "version": "1.0.2",
   "description": "Unique Machine ID for Desktop",
-  "main": "index.js",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/hyroge/machine-id2"
@@ -22,6 +21,7 @@
     "nw.js id"
   ],
   "types": "types/index.d.ts",
+  "main": "./dist/cjs/index.js",
   "exports": {
     ".": {
       "node": {
@@ -29,8 +29,7 @@
         "module": "./dist/esm/index.js",
         "import": "./dist/esm/index.js"
       }
-    },
-    "./*": "./*"
+    }
   },
   "scripts": {
     "build": "rollup -c rollup.config.js",
