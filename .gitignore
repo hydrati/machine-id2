@@ -1,0 +1,10 @@
+cache
+temp
+node_modules
+dist
+types
+yarn.lock
+yarn-error.log
+package-lock.json
+.vscode
+tsdoc-metadata.json

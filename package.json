@@ -1,0 +1,70 @@
+{
+  "name": "machine-id2",
+  "version": "1.0.1",
+  "description": "Unique Machine ID for Desktop",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/hyroge/machine-id2"
+  },
+  "keywords": [
+    "unique id",
+    "license",
+    "trial",
+    "user license",
+    "user id",
+    "machine id",
+    "unique platform id",
+    "node platform id",
+    "unique identifier",
+    "restrictions",
+    "electron id",
+    "nw.js id"
+  ],
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "node": {
+        "require": "./dist/cjs/index.js",
+        "module": "./dist/esm/index.js",
+        "import": "./dist/esm/index.js"
+      }
+    },
+    "./*": "./*"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "build:types": "api-extractor run",
+    "lint": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-external-helpers": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/runtime": "^7.15.4",
+    "@babel/runtime-corejs3": "^7.15.4",
+    "@microsoft/api-extractor": "^7.18.13",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@types/crypto-js": "^4.0.2",
+    "@types/node": "^16.10.2",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "crypto-js": "^4.1.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "execa": "^5.1.1",
+    "rollup": "^2.58.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "native-reg": "^0.3.5"
+  }
+}
